@@ -2,7 +2,7 @@
 
 ![crowd](Images/crowdsale.jpg)
 
-## Background
+## <b> Background </b>
 
 Your company has decided to crowdsale their PupperCoin token in order to help fund the network development.
 This network will be used to track dog breeding activity across the globe in a decentralized way, and allow humans to track the genetic trail of their pets. You have already worked with the necessary legal bodies and obtained the green light on creating a crowdsale open to the public. However, you are required to enable refunds if the crowdsale is successful and the goal is met, and you are only allowed to raise a maximum of 300 ether. The crowdsale will run for 24 weeks.
@@ -16,7 +16,30 @@ It will need to inherit `Crowdsale`, `CappedCrowdsale`, `TimedCrowdsale`, `Refun
 
 You will conduct the crowdsale on the Kovan or Ropsten testnet in order to get a real-world pre-production test in.
 
-## Instructions
+## <b> Summary </b>
+
+I have accomplished the following main tasks through deployment of xyz smart contracts. These contracts were built and executed by using three tools namely Ganache, Remix, MetaMask and xyz.
+
+* I created an `PupperCoin` contract. This will xyz.
+* Next, I created a `Crowdsale` contract that do xyz.
+* Finally, xyz.
+
+## <b> Files locations in GitHub </b>
+
+1. I have created a repository called `Crowdsale` in the Github.
+2. Inside the above there is folder named `Code` which has all the xyz contracts along with xyz contract which was tested on the timelock functionality:
+* [`PupperCoin.sol`](Code/PupperCoin.sol)
+* [`Crowdsale.sol`](Code/Crowdsale.sol)
+
+## <b> Details on each tasks </b>
+
+### <b> The `ERC20 PupperCoin` Contract </b>
+
+I have used a standard `ERC20Mintable` and `ERC20Detailed` contract, hardcoding `18` as the `decimals` parameter, and leaving the `initial_supply` parameter alone. <i> Note that I have not hardcoded the decimals; since most use-cases match Ethereum's default </i>
+
+Simply fill in the `PupperCoin.sol` file with this [starter code](../Starter-Code/PupperCoin.sol), which contains the complete contract you'll need to work with in the Crowdsale.
+
+### Level Two: The `TieredProfitSplitter` Contract
 
 ### Creating your project
 
@@ -26,13 +49,6 @@ Create a new contract named `PupperCoinCrowdsale.sol`, and prepare it like a sta
 
 ### Designing the contracts
 
-#### ERC20 PupperCoin
-
-You will need to simply use a standard `ERC20Mintable` and `ERC20Detailed` contract, hardcoding `18` as the `decimals` parameter, and leaving the `initial_supply` parameter alone.
-
-You don't need to hardcode the decimals; however, since most use-cases match Ethereum's default, you may do so.
-
-Simply fill in the `PupperCoin.sol` file with this [starter code](../Starter-Code/PupperCoin.sol), which contains the complete contract you'll need to work with in the Crowdsale.
 
 #### PupperCoinCrowdsale
 
@@ -81,6 +97,10 @@ You can also do the same for MetaMask. Make sure to purchase higher amounts of t
 ### Deploying the Crowdsale
 
 Deploy the crowdsale to the Kovan or Ropsten testnet, and store the deployed address for later. Switch MetaMask to your desired network, and use the `Deploy` tab in Remix to deploy your contracts. Take note of the total gas cost, and compare it to how costly it would be in reality. Since you are deploying to a network that you don't have control over, faucets will not likely give out 300 test ether. You can simply reduce the goal when deploying to a testnet to a much smaller amount, like 10,000 wei.
+
+### Resources
+[OpenZeppelin RefundableCrowdsale](https://docs.openzeppelin.com/contracts/2.x/crowdsales#crowdsale-rate)
+
 
 ### Submission
 
